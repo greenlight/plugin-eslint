@@ -1,6 +1,6 @@
 repository:
   name: plugin-eslint
-  description: "Greenlight Official Plugin: ESLint"
+  description: "🔧 Greenlight Official Plugin: ESLint"
   topics: greenlight, plugin, eslint
   homepage: https://greenlight.ci
   private: false
