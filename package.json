@@ -1,0 +1,75 @@
+{
+  "private": true,
+  "version": "0.0.0-development",
+  "name": "@greenlight/plugin-eslint",
+  "description": "Greenlight Official Plugin: ESLint",
+  "author": "Ahmad Nassri <ahmad@ahmadnassri.com> (https://www.ahmadnassri.com/)",
+  "homepage": "https://greenlight.ci/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/greenlight/plugin-eslint.git"
+  },
+  "license": "ISC",
+  "keywords": [
+    "greenlight",
+    "plugin",
+    "eslint"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=8"
+  },
+  "files": [
+    "lib"
+  ],
+  "bugs": {
+    "url": "https://github.com/greenlight/plugin-eslint/issues"
+  },
+  "scripts": {
+    "test": "npm run test:tap",
+    "test:tap": "tap test/*.js --coverage-report=lcov --no-browser",
+    "coverage": "opener coverage/lcov-report/index.html"
+  },
+  "dependencies": {
+    "babel-eslint": "^8.2.2",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-config-angular": "^0.5.0",
+    "eslint-config-eslint": "^4.0.0",
+    "eslint-config-fb-strict": "^22.4.3",
+    "eslint-config-google": "^0.9.1",
+    "eslint-config-hapi": "^11.1.0",
+    "eslint-config-jest-enzyme": "^6.0.0",
+    "eslint-config-loopback": "^10.0.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-config-react-app": "^2.1.0",
+    "eslint-config-semistandard": "^12.0.1",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-config-standard-jsx": "^5.0.0",
+    "eslint-config-standard-react": "^6.0.0",
+    "eslint-config-vue": "^2.0.2",
+    "eslint-config-walmart": "^2.2.0",
+    "eslint-config-xo": "^0.20.1",
+    "eslint-config-xo-react": "^0.16.0",
+    "eslint-config-xo-space": "^0.18.0",
+    "eslint-import-resolver-webpack": "^0.9.0",
+    "eslint-plugin-hapi": "^4.1.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-relay": "0.0.21",
+    "eslint-plugin-shopify": "^20.0.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "eslint-plugin-vue": "^4.4.0",
+    "fast-glob": "^2.2.0",
+    "smart-promise": "^2.0.0",
+    "webpack": "^4.5.0"
+  },
+  "devDependencies": {
+    "@greenlight/schema-plugin": "^1.1.0",
+    "@greenlight/schema-report": "^1.1.0",
+    "ajv": "^6.4.0",
+    "tap": "^11.1.3"
+  }
+}
