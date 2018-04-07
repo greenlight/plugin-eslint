@@ -12,10 +12,7 @@ stages:
   - test
   - release
 
-install: npm ci
-before_install:
-  - dpkg --compare-versions `npm -v` ge 5.8 || npm i -g npm@^5.8
-  - export PATH=$PATH:$TRAVIS_BUILD_DIR/.scripts
+before_install: export PATH=$PATH:$TRAVIS_BUILD_DIR/.scripts
 
 jobs:
   include:
