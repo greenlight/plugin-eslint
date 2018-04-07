@@ -12,6 +12,7 @@ stages:
   - test
   - release
 
+install: npm ci
 before_install: export PATH=$PATH:$TRAVIS_BUILD_DIR/.scripts
 
 jobs:
