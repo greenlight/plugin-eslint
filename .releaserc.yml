@@ -1,11 +1,9 @@
-verifyConditions:
-  - "@semantic-release/github"
+verifyConditions: "@semantic-release/github"
 
-publish:
-  - "@semantic-release/github"
+publish: "@semantic-release/github"
 
-success:
-  - "@semantic-release/github"
+success: "@semantic-release/github"
 
-fail:
-  - "@semantic-release/github"
+fail: "@semantic-release/github"
+
+prepare: []
