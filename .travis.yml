@@ -16,6 +16,7 @@ cache:
 stages:
   - test
   - coverage
+  - release
 
 before_install: export PATH=$PATH:$TRAVIS_BUILD_DIR/.scripts
 
@@ -26,3 +27,10 @@ jobs:
       before_script: test-reporter before-build
       script: npm run test:tap
       after_script: test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
+
+    - stage: release
+      node: 9
+      install: npm install --production
+      script: npx semantic-release
+      if: branch = master
+      if: type IN (push)
