@@ -1,7 +1,7 @@
 const { join } = require('path')
-const { schema } = require('@greenlight/schema-report')
 const { test } = require('tap')
 const Ajv = require('ajv')
+const schema = require('@greenlight/schema-report')
 const run = require('../lib/run')
 
 // force AJV to be async

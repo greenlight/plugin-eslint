@@ -1,20 +1,23 @@
 FROM node:9.11-alpine
 LABEL maintainer="Ahmad Nassri <ahmad@ahmadnassri.com>"
+LABEL greenlight.version="1.0.0"
+LABEL greenlight.name="greenlight/eslint"
+LABEL greenlight.description="A fully pluggable tool for identifying and reporting on patterns in JavaScript"
 
-RUN npm i -g npm@5
+WORKDIR /app/
 
-COPY lib /app/lib
-COPY index.js /app/
 COPY package.json /app/
 COPY package-lock.json /app/
 
+RUN npm i --prod
 
-WORKDIR /app/
-RUN npm ci
+COPY lib /app/lib
+COPY index.js /app/
+
 RUN chmod +x index.js
 
-VOLUME /code/
-WORKDIR /code/
+VOLUME /source/
+WORKDIR /source/
 
 ENTRYPOINT ["/app/index.js"]
 CMD ["run"]
