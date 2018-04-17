@@ -1,4 +1,4 @@
-FROM node:9.10-alpine
+FROM node:9.11-alpine
 LABEL maintainer="Ahmad Nassri <ahmad@ahmadnassri.com>"
 
 RUN npm i -g npm@5
