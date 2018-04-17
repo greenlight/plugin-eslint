@@ -4,21 +4,33 @@ const Ajv = require('ajv')
 const schema = require('@greenlight/schema-report')
 const run = require('../lib/run')
 
-// force AJV to be async
-schema.$async = true
-
 const ajv = new Ajv()
 const validate = ajv.compile(schema)
 const fixtures = join(__dirname, 'fixtures')
 
 test('success run', assert => {
-  assert.plan(1)
+  assert.plan(5)
 
-  assert.resolves(run(fixtures).then(validate))
+  const stream = {
+    write: (out) => {
+      if (out === '\0') return
+      const valid = validate(JSON.parse(out))
+      assert.ok(valid)
+    }
+  }
+
+  assert.resolves(run({}, fixtures, stream))
 })
 
 test('no config found', assert => {
-  assert.plan(1)
+  assert.plan(2)
 
-  assert.resolves(run(__dirname).then(validate))
+  const stream = {
+    write: (out) => {
+      if (out === '\0') return
+      assert.match(JSON.parse(out), { messageTemplate: 'no-config-found' })
+    }
+  }
+
+  assert.resolves(run({}, __dirname, null, stream))
 })

@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
+const settings = require('/settings.json')
 const run = require('./lib/run')
 
-run()
-  .then(JSON.stringify)
-  .then(console.log)
+run(settings)
