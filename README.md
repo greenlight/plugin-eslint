@@ -8,7 +8,7 @@ in your `greenlight.yml` file include:
 
 ```js
 plugins:
-  greenlight/eslint: true
+  audit/eslint: true
 ```
 
 ---
