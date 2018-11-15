@@ -113,7 +113,7 @@
     "eslint-plugin-unicorn": "^2.1.2",
     "eslint-plugin-vue": "^4.2.2",
     "eslint-plugin-wordpress": "^0.1.0",
-    "eslint-plugin-xogroup": "^1.2.0",
+    "eslint-plugin-xogroup": "^2.0.0",
     "eslint-plugin-xss": "^0.1.8",
     "prettier": "^1.2.2",
     "fast-glob": "^2.2.0",
