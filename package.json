@@ -88,7 +88,7 @@
     "eslint-plugin-jasmine": "^2.2.0",
     "eslint-plugin-jest": "^20.0.3",
     "eslint-plugin-jquery": "^1.1.1",
-    "eslint-plugin-jsdoc": "^3.0.0",
+    "eslint-plugin-jsdoc": "^4.0.0",
     "eslint-plugin-json": "^1.2.0",
     "eslint-plugin-jsx-a11y": "^4.0.0",
     "eslint-plugin-lodash": "^3.0.0",
