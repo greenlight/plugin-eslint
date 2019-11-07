@@ -3,7 +3,7 @@ repository:
   description: "🔧 Greenlight Official Plugin: ESLint"
   topics: greenlight, plugin, eslint
   homepage: https://greenlight.ci
-  private: false
+  private: true
   has_issues: true
   has_wiki: false
   has_downloads: false
